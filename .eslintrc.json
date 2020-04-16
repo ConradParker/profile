@@ -1,0 +1,14 @@
+{
+  "env": { "browser": true, "node": true, "jasmine": true, "es6": true },
+  "extends": ["airbnb-base", "prettier"],
+  "plugins": ["html"],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "experimentalObjectRestSpread": true,
+    "ecmaVersion": 6
+  },
+  "rules": {
+    "import/extensions": "off",
+    "linebreak-style": 0
+  }
+}
