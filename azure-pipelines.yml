@@ -12,6 +12,6 @@ pool:
 steps:
 - script: npm install
   displayName: Running npm install
-- publish: $(System.DefaultWorkingDirectory)/bin/ConradProfile
+- publish: $(System.DefaultWorkingDirectory)/src
   artifact: ConradProfile
   
