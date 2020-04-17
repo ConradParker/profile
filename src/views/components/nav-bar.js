@@ -6,13 +6,14 @@ template.innerHTML = `
     .topnav {
       font-family: Arial, Helvetica, sans-serif;
       overflow: hidden;
-      background-color: #333;
+      background-color: var(--secondary-color, #333);
     }
 
     .topnav a {
+      transition:all 0.4s ease;
       float: left;
       display: block;
-      color: #f2f2f2;
+      color: var(--background-color, #f2f2f2);
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
@@ -20,12 +21,12 @@ template.innerHTML = `
     }
 
     .topnav a:hover {
-      background-color: #ddd;
+      background-color: var(--primary-color, #ddd); 
       color: black;
     }
 
     .topnav a.active {
-      background-color: #4CAF50;
+      background-color: var(--tertiary-color, #4caf50);;
       color: white;
     }
 
@@ -58,10 +59,8 @@ template.innerHTML = `
   </style>
 
   <nav id="top-nav" class="topnav">
-    <a href="#home" class="active">Home</a>
-    <a href="#news">News</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
+    <a href="/#/" class="active">Home</a>
+    <a href="/#/skills">Skills</a>
     <menu-icon class="icon"></menu-icon>
   </nav>
 `;

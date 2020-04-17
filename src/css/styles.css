@@ -1,5 +1,9 @@
 :root {
-  --menu-icon-color: #fff;
+  --primary-color: #fdb813;
+  --secondary-color: #2f4858;
+  --tertiary-color: #98b42d;
+  --background-color: #f2f2f2;
+  --menu-icon-color: #f2f2f2;
 }
 
 body {
