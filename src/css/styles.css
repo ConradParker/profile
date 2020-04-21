@@ -1,12 +1,106 @@
+/*
+* === MAIN THEME ===
+*/
 :root {
   --primary-color: #fdb813;
   --secondary-color: #2f4858;
-  --tertiary-color: #98b42d;
-  --background-color: #f2f2f2;
-  --menu-icon-color: #f2f2f2;
+  --tertiary-color: #333;
+  --quaternary-color: #666;
+  --background-color: #666;
+  --main-font-color: #f2f2f2;
 }
 
 body {
   margin: 0;
   padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--main-font-color, #fff);
+}
+
+/*
+* -- CSS Grid --
+*/
+* {
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 720px) {
+  .header-grid-container {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-areas:
+      'image image image name name name name name cv'
+      'image image image title title title title title links'
+      'image image image menu menu menu menu menu menu';
+  }
+  .header-grid-item.name {
+    text-align: left;
+  }
+  .header-grid-item.title {
+    text-align: left;
+  }
+}
+.header-grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 30px;
+  padding: 1em;
+  text-align: center;
+}
+.header-grid-item.image {
+  grid-area: image;
+  background: url('../images/conrad.jpg') center;
+  background-size: cover;
+  min-height: 200px;
+  max-height: 300px;
+}
+.header-grid-item.name {
+  grid-area: name;
+  background-color: var(--tertiary-color, #333);
+}
+.header-grid-item.cv {
+  grid-area: cv;
+  background-color: var(--quaternary-color, #666);
+  background: center / contain no-repeat url('../images/download.svg');
+}
+.header-grid-item.title {
+  grid-area: title;
+  background-color: var(--quaternary-color, #666);
+}
+.header-grid-item.links {
+  grid-area: links;
+  background-color: var(--tertiary-color, #333);
+}
+.header-grid-item.menu {
+  grid-area: menu;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding: 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+.header-grid-item .menu-item {
+  background-color: var(--secondary-color, #fff);
+}
+
+.menu a {
+  transition: all 0.4s ease;
+  color: var(--main-font-color, #f2f2f2);
+  text-align: center;
+  padding: 1.5em;
+  text-decoration: none;
+  font-size: 17px;
+}
+.menu a:hover {
+  background-color: var(--primary-color, #ddd);
+  color: black;
+}
+
+.menu a.active {
+  background-color: var(--tertiary-color, #4caf50);
+  color: white;
+}
+
+main {
+  background-color: var(--tertiary-color, #333);
+  padding: 2em;
 }

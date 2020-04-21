@@ -1,4 +1,4 @@
-const error404 = {
+export default {
   render: async () => {
     const view = `
           <section class="section">
@@ -9,4 +9,3 @@ const error404 = {
   },
   after_render: async () => {},
 };
-export default error404;

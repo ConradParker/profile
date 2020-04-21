@@ -1,15 +1,9 @@
-import home from '../views/pages/home.js';
-import skills from '../views/pages/skills.js';
-import error404 from '../views/pages/error404.js';
 import utils from './utils.js';
-
-const routes = {
-  '/': home,
-  '/skills': skills,
-};
+import routes from './routes.js';
+import error404 from '../views/pages/error404.js';
 
 // The router code. Takes a URL, checks against the list of supported routes and then renders the corresponding content page.
-const router = async () => {
+export default async () => {
   const loadingText = 'Loading...';
 
   // Lazy load view element:
@@ -33,4 +27,3 @@ const router = async () => {
   // Call any events on the page after its been rendered
   await page.after_render();
 };
-export default router;

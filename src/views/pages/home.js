@@ -1,12 +1,22 @@
-const error404 = {
+/**
+ * Use in line for performance
+ * Maybe look into a way to preload these
+ */
+const view = `
+<section class="section">
+  <ul>
+    <li>Father</li>
+    <li>Husband</li>
+    <li>Software Developer</li>
+    <li>Juggler</li>
+    <li>Geek</li>
+  </ul>
+</section>
+`;
+
+export default {
   render: async () => {
-    const view = `
-          <section class="section">
-              <h1>Home</h1>
-          </section>
-      `;
     return view;
   },
   after_render: async () => {},
 };
-export default error404;

@@ -61,6 +61,7 @@ template.innerHTML = `
   <nav id="top-nav" class="topnav">
     <a href="/#/" class="active">Home</a>
     <a href="/#/skills">Skills</a>
+    <a href="/#/contact">Contact</a>
     <menu-icon class="icon"></menu-icon>
   </nav>
 `;
