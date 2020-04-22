@@ -24,6 +24,15 @@ body {
   box-sizing: border-box;
 }
 
+@media screen and (max-width: 720px) {
+  .header-grid-item.cv {
+    display: none;
+  }
+  .header-grid-item.links {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 720px) {
   .header-grid-container {
     display: grid;
@@ -33,16 +42,34 @@ body {
       'image image image title title title title title links'
       'image image image menu menu menu menu menu menu';
   }
+  .header-grid-item {
+    font-size: 30px;
+  }
   .header-grid-item.name {
     text-align: left;
   }
   .header-grid-item.title {
     text-align: left;
   }
+
+  .header-grid-item.cv {
+    grid-area: cv;
+    background-color: var(--quaternary-color, #666);
+    background: center / contain no-repeat url('../images/download.svg');
+    margin: 0.5em;
+  }
+  .header-grid-item.links {
+    grid-area: links;
+    background-color: var(--tertiary-color, #333);
+  }
+
+  .header-grid-item.menu {
+    font-size: 17px;
+  }
 }
+
 .header-grid-item {
   background-color: rgba(255, 255, 255, 0.8);
-  font-size: 30px;
   padding: 1em;
   text-align: center;
 }
@@ -50,33 +77,28 @@ body {
   grid-area: image;
   background: url('../images/conrad.jpg') center;
   background-size: cover;
-  min-height: 200px;
-  max-height: 300px;
+  min-height: 250px;
 }
 .header-grid-item.name {
   grid-area: name;
   background-color: var(--tertiary-color, #333);
 }
-.header-grid-item.cv {
-  grid-area: cv;
-  background-color: var(--quaternary-color, #666);
-  background: center / contain no-repeat url('../images/download.svg');
-}
 .header-grid-item.title {
   grid-area: title;
   background-color: var(--quaternary-color, #666);
 }
-.header-grid-item.links {
-  grid-area: links;
-  background-color: var(--tertiary-color, #333);
-}
+
 .header-grid-item.menu {
   grid-area: menu;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   padding: 0;
   cursor: pointer;
-  font-size: 20px;
+}
+@media screen and (max-width: 600px) {
+  .header-grid-item.menu {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 .header-grid-item .menu-item {
   background-color: var(--secondary-color, #fff);
@@ -86,9 +108,8 @@ body {
   transition: all 0.4s ease;
   color: var(--main-font-color, #f2f2f2);
   text-align: center;
-  padding: 1.5em;
+  padding: 1em 1em;
   text-decoration: none;
-  font-size: 17px;
 }
 .menu a:hover {
   background-color: var(--primary-color, #ddd);
