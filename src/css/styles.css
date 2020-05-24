@@ -1,40 +1,51 @@
 /*
-* === MAIN THEME ===
+* === General Styles ===
 */
 :root {
   --primary-color: #fdb813;
   --secondary-color: #2f4858;
   --tertiary-color: #333;
   --quaternary-color: #666;
-  --background-color: #666;
+  --dark-grey-color: #666;
+  --light-grey-color: #999;
+  --white-color: #fff;
+  --blue-color: blue;
+  --black-color: #000;
   --main-font-color: #f2f2f2;
 }
-
-body {
+.page {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   color: var(--main-font-color, #fff);
 }
+.content {
+  background-color: var(--tertiary-color);
+  padding: 2em;
+  margin-bottom: 6em;
+}
+.grid {
+  display: grid;
+}
+.background-light-grey {
+  background-color: var(--light-grey-color);
+}
+.background-dark-grey {
+  background-color: var(--dark-grey-color);
+}
+.background-white {
+  color: var(--black-color);
+  background-color: var(--white-color);
+}
+.background-blue {
+  background-color: var(--blue-color);
+}
 
 /*
-* -- CSS Grid --
+* === Header CSS Grid Layout ===
 */
-* {
-  box-sizing: border-box;
-}
-
-@media screen and (max-width: 720px) {
-  .header-grid-item.cv {
-    display: none;
-  }
-  .header-grid-item.links {
-    display: none;
-  }
-}
-
 @media screen and (min-width: 720px) {
-  .header-grid-container {
+  .header {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-template-areas:
@@ -42,53 +53,69 @@ body {
       'image image image title title title title title links'
       'image image image menu menu menu menu menu menu';
   }
-  .header-grid-item {
+  .header__item {
+    box-sizing: border-box;
     font-size: 30px;
   }
-  .header-grid-item.name {
+  .header__name {
     text-align: left;
   }
-  .header-grid-item.title {
+  .header__title {
     text-align: left;
   }
 
-  .header-grid-item.cv {
+  .header__cv {
     grid-area: cv;
     background-color: var(--quaternary-color, #666);
     background: center / contain no-repeat url('../images/download.svg');
     margin: 0.5em;
   }
-  .header-grid-item.links {
+  .header__links {
     grid-area: links;
     background-color: var(--tertiary-color, #333);
   }
 
-  .header-grid-item.menu {
+  .header__menu {
     font-size: 17px;
   }
 }
 
-.header-grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 1em;
-  text-align: center;
+@media screen and (max-width: 720px) {
+  .header__cv {
+    display: none;
+  }
+  .header__links {
+    display: none;
+  }
+  .header__name {
+    text-align: center;
+    font-size: 24px;
+  }
+  .header__title {
+    text-align: center;
+    font-size: 24px;
+  }
 }
-.header-grid-item.image {
+
+.header__item {
+  padding: 1em;
+}
+.header__image {
   grid-area: image;
   background: url('../images/conrad.jpg') center;
   background-size: cover;
   min-height: 250px;
 }
-.header-grid-item.name {
+.header__name {
   grid-area: name;
   background-color: var(--tertiary-color, #333);
 }
-.header-grid-item.title {
+.header__title {
   grid-area: title;
   background-color: var(--quaternary-color, #666);
 }
 
-.header-grid-item.menu {
+.header__menu {
   grid-area: menu;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -96,32 +123,64 @@ body {
   cursor: pointer;
 }
 @media screen and (max-width: 600px) {
-  .header-grid-item.menu {
+  .header__menu {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-.header-grid-item .menu-item {
-  background-color: var(--secondary-color, #fff);
-}
 
-.menu a {
+.menu__item {
+  background-color: var(--secondary-color, #2f4858);
   transition: all 0.4s ease;
   color: var(--main-font-color, #f2f2f2);
   text-align: center;
   padding: 1em 1em;
   text-decoration: none;
 }
-.menu a:hover {
+.menu__item:hover {
   background-color: var(--primary-color, #ddd);
   color: black;
 }
 
-.menu a.active {
+.menu__item--active {
   background-color: var(--tertiary-color, #4caf50);
   color: white;
 }
+/** === End Header CSS Grid Layout === */
 
-main {
-  background-color: var(--tertiary-color, #333);
+.offset-box-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    'leftTopBox leftTopBox rightTopBox'
+    'leftBottomBox rightBottomBox rightBottomBox';
+}
+.box-item-top-left {
+  grid-area: leftTopBox;
   padding: 2em;
+}
+.box-item-top-right {
+  grid-area: rightTopBox;
+  padding: 2em;
+}
+.box-item-bottom-left {
+  grid-area: leftBottomBox;
+  padding: 2em;
+}
+.box-item-bottom-right {
+  grid-area: rightBottomBox;
+  padding: 2em;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--quaternary-color);
+  color: white;
+  text-align: center;
+  padding: 2em;
+}
+.footer__link {
+  color: white;
 }

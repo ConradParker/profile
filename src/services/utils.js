@@ -6,13 +6,10 @@ const utils = {
     return keys.reduce((a, b) => (a || {})[b], object) !== undefined;
   },
 
-  /**
-   * Parse a url and break it into resource, id and verb
-   */
-  parseRequestURL() {
-    const url = window.location.hash.slice(1) || '/';
-    const [resource, id, verb] = url.split('/').splice(1);
-    return { resource, id, verb };
+  async getPage(pageName) {
+    const page = await fetch(`./views/pages/${pageName}.html`);
+    const view = await page.text();
+    return view;
   },
 };
 

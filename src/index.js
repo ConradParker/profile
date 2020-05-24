@@ -1,16 +1,18 @@
 import router from './services/router.js';
 
+function updateRoute() {
+  const contentElement = 'page-container';
+  router(contentElement);
+}
 // Listen on hash change:
-window.addEventListener('hashchange', router);
+window.addEventListener('hashchange', updateRoute);
 
 // Listen on page load:
-window.addEventListener('load', router);
+window.addEventListener('load', updateRoute);
 
 function updateMenuDisplay(menuItemClicked) {
-  const activeClassName = 'active';
-  const activeMenuItem = document.querySelector(
-    `.menu-item.${activeClassName}`
-  );
+  const activeClassName = 'menu__item--active';
+  const activeMenuItem = document.querySelector(`.${activeClassName}`);
 
   if (menuItemClicked !== activeMenuItem) {
     activeMenuItem.classList.remove(activeClassName);
@@ -19,7 +21,7 @@ function updateMenuDisplay(menuItemClicked) {
 }
 
 // Listen for Menu Item changes
-const menuItems = document.querySelectorAll('.menu-item');
+const menuItems = document.querySelectorAll('.menu__item');
 menuItems.forEach((menuItem) => {
   menuItem.addEventListener('click', (event) => {
     updateMenuDisplay(event.target);
