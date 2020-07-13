@@ -1,6 +1,6 @@
-/*
-* === General Styles ===
-*/
+/* ==================================================
+   General Styles
+================================================== */
 :root {
   --primary-color: #fdb813;
   --secondary-color: #2f4858;
@@ -13,19 +13,45 @@
   --black-color: #000;
   --main-font-color: #f2f2f2;
 }
+.document {
+  height: 100%;
+}
 .page {
+  height: 100%;
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   color: var(--main-font-color, #fff);
 }
 .content {
+  flex: 1 0 auto;
   background-color: var(--tertiary-color);
-  padding: 2em;
-  margin-bottom: 6em;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.inner-section {
+  padding: 60px 60px;
+}
+.section__header {
+  font-size: 48px;
+}
+.section__caption {
+  font-weight: 300;
 }
 .grid {
   display: grid;
+}
+.grid--responsive {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 1rem;
+}
+.flex {
+  display: flex;
+}
+.flex--down {
+  display: flex;
+  flex-direction: column;
 }
 .background-light-grey {
   background-color: var(--light-grey-color);
@@ -41,112 +67,9 @@
   background-color: var(--blue-color);
 }
 
-/*
-* === Header CSS Grid Layout ===
-*/
-@media screen and (min-width: 720px) {
-  .header {
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-areas:
-      'image image image name name name name name cv'
-      'image image image title title title title title links'
-      'image image image menu menu menu menu menu menu';
-  }
-  .header__item {
-    box-sizing: border-box;
-    font-size: 30px;
-  }
-  .header__name {
-    text-align: left;
-  }
-  .header__title {
-    text-align: left;
-  }
-
-  .header__cv {
-    grid-area: cv;
-    background-color: var(--quaternary-color, #666);
-    background: center / contain no-repeat url('../images/download.svg');
-    margin: 0.5em;
-  }
-  .header__links {
-    grid-area: links;
-    background-color: var(--tertiary-color, #333);
-  }
-
-  .header__menu {
-    font-size: 17px;
-  }
-}
-
-@media screen and (max-width: 720px) {
-  .header__cv {
-    display: none;
-  }
-  .header__links {
-    display: none;
-  }
-  .header__name {
-    text-align: center;
-    font-size: 24px;
-  }
-  .header__title {
-    text-align: center;
-    font-size: 24px;
-  }
-}
-
-.header__item {
-  padding: 1em;
-}
-.header__image {
-  grid-area: image;
-  background: url('../images/conrad.jpg') center;
-  background-size: cover;
-  min-height: 250px;
-}
-.header__name {
-  grid-area: name;
-  background-color: var(--tertiary-color, #333);
-}
-.header__title {
-  grid-area: title;
-  background-color: var(--quaternary-color, #666);
-}
-
-.header__menu {
-  grid-area: menu;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  padding: 0;
-  cursor: pointer;
-}
-@media screen and (max-width: 600px) {
-  .header__menu {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.menu__item {
-  background-color: var(--secondary-color, #2f4858);
-  transition: all 0.4s ease;
-  color: var(--main-font-color, #f2f2f2);
-  text-align: center;
-  padding: 1em 1em;
-  text-decoration: none;
-}
-.menu__item:hover {
-  background-color: var(--primary-color, #ddd);
-  color: black;
-}
-
-.menu__item--active {
-  background-color: var(--tertiary-color, #4caf50);
-  color: white;
-}
-/** === End Header CSS Grid Layout === */
-
+/* ==================================================
+   Home page
+================================================== */
 .offset-box-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -172,10 +95,7 @@
 }
 
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+  flex-shrink: 0;
   background-color: var(--quaternary-color);
   color: white;
   text-align: center;

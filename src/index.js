@@ -1,29 +1,22 @@
-import router from './services/router.js';
+import * as router from './services/router.js';
+import './views/components/header-block.js';
+
+// Set the correct menu item
+function updateMenu() {
+  const routeName = router.getCurrentRoute();
+  const headerBlock = document.querySelector('header-block');
+  const anchorTag = headerBlock.root.querySelector(`a[href='/#${routeName}']`);
+  headerBlock.updateMenuDisplay(anchorTag);
+}
 
 function updateRoute() {
+  // Change the page
   const contentElement = 'page-container';
-  router(contentElement);
+  router.changeRoute(contentElement);
+  updateMenu();
 }
 // Listen on hash change:
 window.addEventListener('hashchange', updateRoute);
 
 // Listen on page load:
 window.addEventListener('load', updateRoute);
-
-function updateMenuDisplay(menuItemClicked) {
-  const activeClassName = 'menu__item--active';
-  const activeMenuItem = document.querySelector(`.${activeClassName}`);
-
-  if (menuItemClicked !== activeMenuItem) {
-    activeMenuItem.classList.remove(activeClassName);
-  }
-  menuItemClicked.classList.add(activeClassName);
-}
-
-// Listen for Menu Item changes
-const menuItems = document.querySelectorAll('.menu__item');
-menuItems.forEach((menuItem) => {
-  menuItem.addEventListener('click', (event) => {
-    updateMenuDisplay(event.target);
-  });
-});

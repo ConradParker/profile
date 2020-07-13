@@ -7,7 +7,7 @@ const utils = {
   },
 
   async getPage(pageName) {
-    const page = await fetch(`./views/pages/${pageName}.html`);
+    const page = await fetch(`./views/pages/${pageName}/${pageName}.html`);
     const view = await page.text();
     return view;
   },
