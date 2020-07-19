@@ -1,19 +1,10 @@
 import * as router from './services/router.js';
+import utils from './services/utils.js';
 import './views/components/header-block.js';
 
-// Set the correct menu item
-function updateMenu() {
-  const routeName = router.getCurrentRoute();
-  const headerBlock = document.querySelector('header-block');
-  const anchorTag = headerBlock.root.querySelector(`a[href='/#${routeName}']`);
-  headerBlock.updateMenuDisplay(anchorTag);
-}
-
 function updateRoute() {
-  // Change the page
-  const contentElement = 'page-container';
-  router.changeRoute(contentElement);
-  updateMenu();
+  router.changeRoute('page-container');
+  utils.updateMenu(router.getCurrentRoute());
 }
 // Listen on hash change:
 window.addEventListener('hashchange', updateRoute);
