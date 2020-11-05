@@ -32,7 +32,7 @@ template.innerHTML = `
     max-height: 5em;
     object-fit: cover;
   }
-  .header__links {
+  .header__linkedin {
     grid-area: links;
     background-color: #006699;
     margin: 0;
@@ -47,11 +47,8 @@ template.innerHTML = `
   .header__cv {
     display: none;
   }
-  .header__links {
+  .header__linkedin {
     display: none;
-  }
-  .header__link {
-    height: 100%;
   }
   .header__name {
     text-align: center;
@@ -80,7 +77,9 @@ template.innerHTML = `
   grid-area: title;
   background-color: var(--quaternary-color, #666);
 }
-
+.header__link {
+  margin: auto;
+}
 .header__menu {
   grid-area: menu;
   display: grid;
@@ -118,14 +117,14 @@ template.innerHTML = `
   <div class="header__item header__name">Conrad Parker</div>
   <div class="header__cv">
     <a class="header__link" href="./documents/ConradParker.pdf" download>
-      <img class="link__img" src="../images/cv.png" alt="conradjparker" title="Download PDF CV" />
+      <img class="link__img" src="../images/cv.png" alt="conradjparker" title="Download CV (PDF)" />
     </a>
   </div>  
   <div class="header__item header__title">Software Developer</div>
-  <div class="header__item header__links">
-    <!--<a href="https://www.linkedin.com/in/conradjparker/">
-      <img class="header_link" src="../images/linked-in.png" alt="conradjparker" />
-    </a>-->
+  <div class="header__linkedin">
+    <a class="header__link" href="https://www.linkedin.com/in/conradjparker/">
+      <img class="link__img" src="../images/linked-in.png" alt="Linked In" title="Linked In" />
+    </a>
   </div>
   <div class="header__item header__menu menu">
     <a href="/#/" class="menu__item menu__item--active">Home</a>

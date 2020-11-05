@@ -1,0 +1,26 @@
+/* ==================================================
+   Home page
+================================================== */
+.offset-box-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    'leftTopBox leftTopBox rightTopBox'
+    'leftBottomBox rightBottomBox rightBottomBox';
+}
+.box-item-top-left {
+  grid-area: leftTopBox;
+  padding: 2em;
+}
+.box-item-top-right {
+  grid-area: rightTopBox;
+  padding: 2em;
+}
+.box-item-bottom-left {
+  grid-area: leftBottomBox;
+  padding: 2em;
+}
+.box-item-bottom-right {
+  grid-area: rightBottomBox;
+  padding: 2em;
+}
