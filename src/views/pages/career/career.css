@@ -89,6 +89,7 @@
 
 /* The actual content */
 .timeline__content {
+  text-align: center;
   padding: 20px 30px;
   background-color: white;
   position: relative;

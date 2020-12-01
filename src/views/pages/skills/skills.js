@@ -2,8 +2,8 @@ import utils from '../../../services/utils.js';
 
 export default {
   render: async () => {
-    utils.injectCss('/views/pages/prjects/projects.css');
-    return utils.getPage('projects');
+    utils.injectCss('/views/pages/skills/skills.css');
+    return utils.getPage('skills');
   },
   after_render: async () => {},
 };

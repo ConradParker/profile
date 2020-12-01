@@ -4,7 +4,7 @@ My Profile
 
 ## Overview
 
-An attempt to re-build my well out of date profile page using pure Javascript and CSS. Yes, you got it. No frameworks or frills. Just back to basics. I'm not against frameworks by any means and believe they have their place. I believe Javascript and CSS have both improved over the past few years and for my profile page it should be enough. Also it gives me opportunity to try out some of the new features.
+An attempt to re-build my well out of date profile page using pure HTML, Javascript and CSS. Yes, you got it. No frameworks or frills. Just back to basics. I'm not against frameworks by any means and believe they have their place. I just believe plain HTML, Javascript and CSS have all improved over the past few years and for my profile page it should be enough. Also it gives me opportunity to try out some of the new features.
 
 ### Objectives
 
