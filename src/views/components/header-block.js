@@ -13,6 +13,7 @@ template.innerHTML = `
       'image image image name name name name name cv'
       'image image image title title title title title links'
       'image image image menu menu menu menu menu menu';
+    background-color: #fff;
   }
   .header__item {
     box-sizing: border-box;
@@ -65,7 +66,7 @@ template.innerHTML = `
 }
 .header__image {
   grid-area: image;
-  background: url('../images/conrad.jpg') center;
+  background: no-repeat url('../images/conrad.jpg') center;
   background-size: cover;
   min-height: 250px;
 }

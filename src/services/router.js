@@ -22,6 +22,10 @@ function getCurrentRoute() {
 
 // The router code. Checks the URL, checks against the list of supported routes and then renders the corresponding content page.
 async function changeRoute(elementId) {
+  // TODO: Hide content whilst loading new page to prevent flash
+  // const contentDiv = document.querySelector('.content');
+  // contentDiv.setAttribute('style', 'visibility: hidden; height:1500px');
+
   // Lazy load view element:
   const content = null || document.getElementById(elementId);
   const parsedURL = getCurrentRoute();
