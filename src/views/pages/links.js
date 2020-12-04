@@ -17,7 +17,7 @@ export default {
                 </a>
               </li>
               <li class="list-item">
-              My old website (Just could bring it down)
+              My old website (Just couldn't bring it down)
               <a class="link" href="https://archived.sunseasolutions.com">
                 <img class="link__image" src="../images/sun.png" alt="My old site" title="My old site" />https://archived.sunseasolutions.com
               </a>
