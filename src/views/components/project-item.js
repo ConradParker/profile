@@ -12,6 +12,8 @@ template.innerHTML = `
       background-color: #ddd;
       color: var(--black-color);
       text-decoration: none;
+      max-width: 400px;
+      margin: 0 auto;
     }
     .project-box__image {
       max-width: 100%;

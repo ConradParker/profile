@@ -5,9 +5,12 @@
   --primary-color: #fdb813;
   --secondary-color: #2f4858;
   --tertiary-color: #333;
-  --quaternary-color: #666;
-  --dark-grey-color: #666;
+
+  --dark-grey-color: #2f2f2f;
+  --mid-dark-grey-color: #404040;
+  --mid-grey-color: #505050;
   --light-grey-color: #999;
+
   --white-color: #fff;
   --blue-color: blue;
   --black-color: #000;
@@ -20,26 +23,35 @@
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
   color: var(--main-font-color, #fff);
   background-color: var(--tertiary-color);
+  font-family: Verdana, Tahoma, sans-serif;
 }
 
 .content {
   flex: 1 0 auto;
   background-color: var(--tertiary-color);
+  margin: 0 2rem;
+}
+
+.center-text {
+  max-width: 900px;
+  margin: 0 auto 25px auto;
+  text-align: justify;
+  line-height: 1.8rem;
+
+  letter-spacing: 0.5px;
 }
 
 .uppercase {
   text-transform: uppercase;
 }
 .section {
-  margin: 3em;
+  padding: 0 3em;
 }
 
 .section__header {
   position: relative;
-  text-align: center;
   padding: 1rem;
   font-size: 1.5em;
   margin-bottom: 2.5rem;
@@ -60,8 +72,7 @@
 .section__caption {
   font-size: 1.2em;
   font-weight: 300;
-  text-align: center;
-  margin-block-start: 0.5em;
+  padding-bottom: 15px;
 }
 
 .grid {
@@ -109,10 +120,22 @@
   line-height: 30px;
   margin-left: 1rem;
 }
+.list--nobullet {
+  list-style-type: none;
+}
+.list-item {
+  margin: 2rem;
+}
 
 /* ==================================================
-   Home page
+   Links page
 ================================================== */
+
+.link {
+  color: var(--main-font-color);
+  display: flex;
+  align-items: center;
+}
 
 /* ==================================================
    Projects page
@@ -124,7 +147,7 @@
   align-items: center;
   text-align: center;
   grid-gap: 2rem;
-  padding: 1rem 80px;
+  padding: 3rem 1rem;
   font-size: 1.2rem;
 }
 
@@ -365,7 +388,7 @@
 ================================================== */
 .footer {
   flex-shrink: 0;
-  background-color: var(--quaternary-color);
+  background-color: var(--mid-grey-color);
   color: white;
   text-align: center;
   padding: 2em;

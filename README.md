@@ -1,6 +1,4 @@
-# Conrad Parker Profile
-
-My Profile
+# My Profile
 
 ## Overview
 

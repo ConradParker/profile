@@ -1,5 +1,11 @@
 [
   {
+    "name": "My Profile",
+    "description": "HTML5, Javascript and CSS",
+    "imageSrc": "https://res.cloudinary.com/sunseasolutions/image/upload/v1607005488/SunSeaSolutions.com/profile.jpg",
+    "link": "https://github.com/ConradParker/profile"
+  },
+  {
     "name": "Copper Pot Adventures",
     "description": "Using Gatsby, Contentful and GraphQL",
     "imageSrc": "https://res.cloudinary.com/sunseasolutions/image/upload/v1607005488/SunSeaSolutions.com/cornelius.jpg",

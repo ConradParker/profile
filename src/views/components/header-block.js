@@ -1,18 +1,77 @@
 const template = document.createElement('template');
 template.innerHTML = `
 <style>
+.header__cv {
+  display: none;
+}
+.header__links {
+  display: none;
+}
+.header__name {
+  grid-area: name;
+  background-color: var(--mid-grey-color);
+  text-align: center;
+  font-size: 24px;
+}
+.header__title {
+  text-align: center;
+  font-size: 24px;
+}
+.header__item {
+  padding: 1em;
+}
+.header__image {
+  grid-area: image;
+  background: no-repeat url('../images/header/conrad.jpg') center;
+  background-size: cover;
+  min-height: 250px;
+}
+.header__title {
+  grid-area: title;  
+  background-color: var(--mid-dark-grey-color);
+}
+.header__link {
+  margin: auto;
+}
+.header__menu {
+  grid-area: menu;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0;
+  cursor: pointer;
+}
+.menu__item {
+  background-color: var(--secondary-color);
+  transition: all 0.4s ease;
+  color: var(--main-font-color, #f2f2f2);
+  text-align: center;
+  padding: 1em 1em;
+  text-decoration: none;
+}
+.menu__item:hover {
+  background-color: var(--primary-color);
+  color: black;
+}
 
-/*
-* === Header CSS Grid Layout ===
-*/
+.menu__item--active {
+  background-color: var(--tertiary-color);
+  color: white;
+}
+
+@media screen and (min-width: 600px) {
+  .header__menu {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
 @media screen and (min-width: 720px) {
   .header {
     display: grid;
     grid-template-columns: 50px repeat(auto-fit, minmax(calc((100% - 200px)/7), 1fr)) 150px;
     grid-template-areas:
-      'image image image name name name name name cv'
-      'image image image title title title title title links'
-      'image image image menu menu menu menu menu menu';
+    'image image image name name name name name cv'
+    'image image image title title title title title links'
+    'image image image menu menu menu menu menu menu';
     background-color: #fff;
   }
   .header__item {
@@ -28,103 +87,38 @@ template.innerHTML = `
   .header__cv {
     grid-area: cv;
     margin: auto;
+    display: block;
   }
   .link__img {
     max-height: 5em;
     object-fit: cover;
   }
-  .header__linkedin {
+  .header__links {
     grid-area: links;
-    background-color: #006699;
-    margin: 0;
+    display: flex;
+    background-color: #383838;
   }
-
   .header__menu {
     font-size: 1em;
   }
 }
-
-@media screen and (max-width: 720px) {
-  .header__cv {
-    display: none;
-  }
-  .header__linkedin {
-    display: none;
-  }
-  .header__name {
-    text-align: center;
-    font-size: 24px;
-  }
-  .header__title {
-    text-align: center;
-    font-size: 24px;
-  }
-}
-
-.header__item {
-  padding: 1em;
-}
-.header__image {
-  grid-area: image;
-  background: no-repeat url('../images/conrad.jpg') center;
-  background-size: cover;
-  min-height: 250px;
-}
-.header__name {
-  grid-area: name;
-  background-color: var(--tertiary-color, #333);
-}
-.header__title {
-  grid-area: title;
-  background-color: var(--quaternary-color, #666);
-}
-.header__link {
-  margin: auto;
-}
-.header__menu {
-  grid-area: menu;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  padding: 0;
-  cursor: pointer;
-}
-@media screen and (max-width: 600px) {
-  .header__menu {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.menu__item {
-  background-color: var(--secondary-color, #2f4858);
-  transition: all 0.4s ease;
-  color: var(--main-font-color, #f2f2f2);
-  text-align: center;
-  padding: 1em 1em;
-  text-decoration: none;
-}
-.menu__item:hover {
-  background-color: var(--primary-color, #ddd);
-  color: black;
-}
-
-.menu__item--active {
-  background-color: var(--tertiary-color, #4caf50);
-  color: white;
-}
-/** === End Header CSS Grid Layout === */
 </style>
+
 <header class="header">
   <div class="header__item header__image"></div>
   <div class="header__item header__name">Conrad Parker</div>
   <div class="header__cv">
     <a class="header__link" href="./documents/ConradParker.pdf" download>
-      <img class="link__img" src="../images/cv.png" alt="conradjparker" title="Download CV (PDF)" />
+      <img class="link__img" src="../images/header/cv.png" alt="conradjparker" title="Download CV (PDF)" />
     </a>
   </div>  
   <div class="header__item header__title">Software Developer</div>
-  <div class="header__linkedin">
+  <div class="header__links">
     <a class="header__link" href="https://www.linkedin.com/in/conradjparker/">
       <img class="link__img" src="../images/linked-in.png" alt="Linked In" title="Linked In" />
+    </a>
+    <a class="header__link" href="https://github.com/ConradParker">
+      <img class="link__img" src="../images/github.png" alt="Github" title="Github Profile" />
     </a>
   </div>
   <div class="header__item header__menu menu">
