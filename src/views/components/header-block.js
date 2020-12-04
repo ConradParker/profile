@@ -8,7 +8,7 @@ template.innerHTML = `
 @media screen and (min-width: 720px) {
   .header {
     display: grid;
-    grid-template-columns: repeat(9, 1fr);
+    grid-template-columns: 50px repeat(auto-fit, minmax(calc((100% - 200px)/7), 1fr)) 150px;
     grid-template-areas:
       'image image image name name name name name cv'
       'image image image title title title title title links'
@@ -133,7 +133,7 @@ template.innerHTML = `
     <a href="/#/skills" class="menu__item">Skills</a>
     <a href="/#/career" class="menu__item">Career</a>
     <a href="/#/contact" class="menu__item">Contact</a>
-    <a href="/#/blog" class="menu__item">Blog</a>
+    <a href="/#/links" class="menu__item">Links</a>
   </div>
 </header>
   `;

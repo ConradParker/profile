@@ -1,17 +1,34 @@
 const template = document.createElement('template');
 template.innerHTML = `
-<style>
-  .project__img {
-    border-radius: 4px;
-    padding: 5px;
-  }
-  .project__img:hover {
-      box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-  }
-</style>
-<div class="grid-item">
-  <img class="project__img" />
-</div>
+  <style>    
+    .project-box {
+      padding: 0 0 1rem 0;
+      color: #ddd;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      background-color: #ddd;
+      color: var(--black-color);
+      text-decoration: none;
+    }
+    .project-box__image {
+      max-width: 100%;
+    }
+  </style>
+  <a
+    class="project-box"
+    href="#"
+    target="_blank"
+  >
+    <img
+      src="https://fakeimg.pl/350x200/?text=Image"
+      class="project-box__image"
+    />
+    <h3 class="project-box__title">Project Title</h3>
+    <p class="project-box__description">Project Description</p>
+  </a>
 `;
 
 class ProjectItem extends HTMLElement {
@@ -25,9 +42,19 @@ class ProjectItem extends HTMLElement {
    * @param {{ imageSrc: any; name: any; }} project
    */
   set project(project) {
-    this.image = this.root.querySelector('.project__img');
-    this.image.src = project.imageSrc;
-    this.image.alt = project.name;
+    this.link = this.root.querySelector('.project-box');
+    this.link.href = project.link;
+
+    this.image = this.root.querySelector('.project-box__image');
+    this.image.src =
+      project.imageSrc ?? 'https://fakeimg.pl/350x200/?text=Image';
+    this.image.alt = project.name ?? '';
+
+    this.titleElement = this.root.querySelector('.project-box__title');
+    this.titleElement.innerHTML = project.name ?? '';
+
+    this.description = this.root.querySelector('.project-box__description');
+    this.description.innerHTML = project.description ?? '';
   }
 }
 
