@@ -170,6 +170,7 @@
   padding: 1rem;
   color: #ddd;
   cursor: pointer;
+  min-height: 320px;
 }
 
 .skill-box:hover > .skill-title:after,
