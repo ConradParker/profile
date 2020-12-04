@@ -16,7 +16,9 @@ export default {
     return utils.getPage('projects');
   },
   after_render: async () => {
-    const response = await fetch('../../../data/projects.json');
+    const response = await fetch('../../../data/projects.json', {
+      cache: 'no-store',
+    });
 
     // handle success
     if (response.ok) {
