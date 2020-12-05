@@ -18,6 +18,11 @@ template.innerHTML = `
     .project-box__image {
       max-width: 100%;
     }
+    .project-box__description {
+      min-height: 100px;
+      margin: 0 1rem; 
+    }
+    
   </style>
   <a
     class="project-box"

@@ -6,12 +6,6 @@
     "link": "https://github.com/ConradParker/profile"
   },
   {
-    "name": "Copper Pot Adventures",
-    "description": "Using Gatsby, Contentful and GraphQL",
-    "imageSrc": "https://res.cloudinary.com/sunseasolutions/image/upload/v1607005488/SunSeaSolutions.com/cornelius.jpg",
-    "link": "https://copperpotadventures.com"
-  },
-  {
     "name": "Mexygo",
     "description": "The best Mexican food in Moraira",
     "imageSrc": "https://res.cloudinary.com/sunseasolutions/image/upload/v1513774353/SunSeaSolutions.com/mexygo_logo.png",
@@ -22,5 +16,11 @@
     "description": "He just wants to sing!",
     "imageSrc": "https://res.cloudinary.com/sunseasolutions/image/upload/v1470660811/SunSeaSolutions.com/ClydesKaraoke.png",
     "link": "https://clydeskaraoke.net"
+  },
+  {
+    "name": "Copper Pot Adventures",
+    "description": "Using Gatsby, Contentful and GraphQL",
+    "imageSrc": "https://res.cloudinary.com/sunseasolutions/image/upload/v1607005488/SunSeaSolutions.com/cornelius.jpg",
+    "link": "https://copperpotadventures.com"
   }
 ]

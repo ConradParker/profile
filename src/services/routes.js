@@ -3,7 +3,7 @@ import skills from '../views/pages/skills/skills.js';
 import projects from '../views/pages/projects/projects.js';
 import career from '../views/pages/career/career.js';
 import contact from '../views/pages/contact/contact.js';
-import links from '../views/pages/links.js';
+import links from '../views/pages/links/links.js';
 
 const routes = {
   '/': home,
