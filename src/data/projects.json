@@ -1,7 +1,7 @@
 [
   {
     "name": "My Profile",
-    "description": "Built with pure HTML5, Javascript and CSS",
+    "description": "A SPA built with pure HTML, Vanilla Javascript and CSS",
     "imageSrc": "https://res.cloudinary.com/sunseasolutions/image/upload/v1607005488/SunSeaSolutions.com/profile.jpg",
     "link": "https://github.com/ConradParker/profile"
   },
