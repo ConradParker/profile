@@ -1,5 +1,11 @@
 [
   {
+    "name": "D3 Dewar",
+    "description": "D3 data driven diagram to display Dewar contents",
+    "imageSrc": "https://res.cloudinary.com/sunseasolutions/image/upload/v1607452600/SunSeaSolutions.com/dewar.gif",
+    "link": "https://github.com/ConradParker/d3-dewar"
+  },
+  {
     "name": "My Profile",
     "description": "A SPA built with pure HTML, Vanilla Javascript and CSS",
     "imageSrc": "https://res.cloudinary.com/sunseasolutions/image/upload/v1607005488/SunSeaSolutions.com/profile.jpg",

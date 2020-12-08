@@ -17,6 +17,7 @@ template.innerHTML = `
     }
     .project-box__image {
       max-width: 100%;
+      max-height: 289px;
     }
     .project-box__description {
       min-height: 100px;
