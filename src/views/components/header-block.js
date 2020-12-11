@@ -123,9 +123,9 @@ template.innerHTML = `
   </div>
   <div class="header__item header__menu menu">
     <a href="/#/" class="menu__item menu__item--active">Home</a>
-    <a href="/#/projects" class="menu__item">Projects</a>
     <a href="/#/skills" class="menu__item">Skills</a>
     <a href="/#/career" class="menu__item">Career</a>
+    <a href="/#/projects" class="menu__item">Projects</a>
     <a href="/#/contact" class="menu__item">Contact</a>
     <a href="/#/links" class="menu__item">Links</a>
   </div>
