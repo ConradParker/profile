@@ -31,7 +31,7 @@
 .content {
   flex: 1 0 auto;
   background-color: var(--tertiary-color);
-  margin: 0 1rem;
+  margin: 2rem 1rem 4rem 1rem;
 }
 
 .center {
@@ -50,10 +50,6 @@
   text-transform: uppercase;
 }
 
-.section {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
 .section__header {
   position: relative;
   padding: 1rem;
