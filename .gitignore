@@ -1,5 +1,3 @@
 ## Ignore Visual Studio Code user files
-.vscode/*
-
 ## Node
 node_modules/
