@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/SunSeaSolutions/Profile/_apis/build/status/ConradParker.profile?branchName=master)](https://dev.azure.com/SunSeaSolutions/Profile/_build/latest?definitionId=2&branchName=master)
+
 # My Profile
 
 ## Overview
