@@ -46,6 +46,16 @@
   letter-spacing: 0.5px;
 }
 
+.center-content {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.table-cell {
+  padding: 8px;
+  vertical-align: top;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -84,25 +94,27 @@
 }
 .list {
   display: inline-block;
-  text-align: left;
+  text-align: center;
   line-height: 30px;
   margin-left: 1rem;
-}
-.list--nobullet {
-  list-style-type: none;
-}
-.list-item {
-  margin: 2rem;
 }
 
 /* ==================================================
    Links page
 ================================================== */
-
 .link {
   color: var(--main-font-color);
-  display: flex;
+  display: inline-block;
   align-items: center;
+}
+.link-box {
+  padding: 1rem;
+}
+.link__image {
+  vertical-align: middle;
+}
+.link__text {
+  display: none;
 }
 
 /* ==================================================
@@ -383,10 +395,19 @@
   color: white;
 }
 
+/* ==================================================
+   Media Queries
+================================================== */
 @media screen and (min-width: 768px) {
   .skills-container,
   .projects-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .link__text {
+    display: inline;
+  }
+  .list {
+    text-align: left;
   }
 }
 

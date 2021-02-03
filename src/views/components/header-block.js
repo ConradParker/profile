@@ -1,6 +1,14 @@
 const template = document.createElement('template');
 template.innerHTML = `
 <style>
+.h1 {
+  font-size: inherit;
+  margin-block-start: inherit;
+  margin-block-end: inherit;
+  margin-inline-start: inherit;
+  margin-inline-end: inherit;
+  font-weight: inherit;
+}
 .header__cv {
   display: none;
 }
@@ -106,7 +114,9 @@ template.innerHTML = `
 
 <header class="header">
   <div class="header__item header__image"></div>
-  <div class="header__item header__name">Conrad Parker</div>
+  <div class="header__item header__name">
+    <h1 class="h1">Conrad Parker</h1>
+  </div>
   <div class="header__cv">
     <a class="header__link" href="./documents/ConradParker.pdf" download>
       <img class="link__img" src="../images/header/cv.png" alt="conradjparker" title="Download CV (PDF)" />
