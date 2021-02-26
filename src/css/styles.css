@@ -94,7 +94,7 @@
 }
 .list {
   display: inline-block;
-  text-align: center;
+  text-align: left;
   line-height: 30px;
   margin-left: 1rem;
 }
