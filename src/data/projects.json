@@ -1,19 +1,19 @@
 [
   {
     "name": "D3 Dewar",
-    "description": "D3 data driven diagram to display Dewar contents",
+    "description": "D3 data driven diagram to display Dewar contents.",
     "imageSrc": "https://res.cloudinary.com/sunseasolutions/image/upload/v1607452600/SunSeaSolutions.com/dewar.gif",
     "link": "https://github.com/ConradParker/d3-dewar"
   },
   {
     "name": "My Profile",
-    "description": "A SPA built with pure HTML, Vanilla Javascript and CSS",
+    "description": "A SPA built with pure HTML, Vanilla Javascript and CSS.",
     "imageSrc": "https://res.cloudinary.com/sunseasolutions/image/upload/v1607005488/SunSeaSolutions.com/profile.jpg",
     "link": "https://github.com/ConradParker/profile"
   },
   {
     "name": "Mexygo",
-    "description": "A website for the best Mexican food in Moraira",
+    "description": "A website for the best Mexican food in Moraira.",
     "imageSrc": "https://res.cloudinary.com/sunseasolutions/image/upload/v1513774353/SunSeaSolutions.com/mexygo_logo.png",
     "link": "https://mexygo.es"
   },
@@ -25,7 +25,7 @@
   },
   {
     "name": "Copper Pot Adventures",
-    "description": "A blog using Gatsby, Contentful and GraphQL",
+    "description": "A e-commerce solution using Gatsby, Contentful, GraphQL and Stripe payment integration.",
     "imageSrc": "https://res.cloudinary.com/sunseasolutions/image/upload/v1607005488/SunSeaSolutions.com/cornelius.jpg",
     "link": "https://copperpotadventures.com"
   }
