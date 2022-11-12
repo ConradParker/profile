@@ -252,9 +252,9 @@
 }
 
 .timeline__image {
-  width: 125px;
   vertical-align: middle;
 }
+
 /* Container around content */
 .timeline__box {
   padding: 10px 40px;
@@ -346,6 +346,10 @@
 }
 .career-london__image {
   margin: 0.5rem;
+  width: 125px;
+}
+.career-london__image .timeline__image {
+  width: 125px;
 }
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 720px) {

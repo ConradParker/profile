@@ -12,18 +12,6 @@
     "link": "https://github.com/ConradParker/profile"
   },
   {
-    "name": "Mexygo",
-    "description": "A website for the best Mexican food in Moraira.",
-    "imageSrc": "https://res.cloudinary.com/sunseasolutions/image/upload/v1513774353/SunSeaSolutions.com/mexygo_logo.png",
-    "link": "https://mexygo.es"
-  },
-  {
-    "name": "Clyde's Karaoke",
-    "description": "A website for the Karaoke King of Benidorm!",
-    "imageSrc": "https://res.cloudinary.com/sunseasolutions/image/upload/v1470660811/SunSeaSolutions.com/ClydesKaraoke.png",
-    "link": "https://clydeskaraoke.net"
-  },
-  {
     "name": "Copper Pot Adventures",
     "description": "A e-commerce solution using Gatsby, Contentful, GraphQL and Stripe payment integration.",
     "imageSrc": "https://res.cloudinary.com/sunseasolutions/image/upload/v1607005488/SunSeaSolutions.com/cornelius.jpg",
