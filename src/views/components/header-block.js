@@ -124,9 +124,6 @@ template.innerHTML = `
   </div>  
   <div class="header__item header__title">Software Developer</div>
   <div class="header__links">
-    <a class="header__link" href="https://www.linkedin.com/in/conradjparker/">
-      <img class="link__img" src="../images/linked-in.png" alt="Linked In" title="Linked In" />
-    </a>
     <a class="header__link" href="https://github.com/ConradParker">
       <img class="link__img" src="../images/github.png" alt="Github" title="Github Profile" />
     </a>
