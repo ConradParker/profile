@@ -14,6 +14,8 @@ export default {
         const json = await response.json();
         const title = json.name;
         const data = json.data[0];
+        const status = data.value_classification;
+        const percent = data.value;
 
         let startTimeMilliseconds = data.time_until_update * 1000;
 
@@ -22,11 +24,9 @@ export default {
           startTimeMilliseconds -= 1000;
           document.getElementById(
             'number-container'
-          ).innerText = `Time to next update: ${timeToUpdate}`;
+          ).innerHTML = `${percent}% ${status}<br/><br/>  Time to next update: ${timeToUpdate}`;
         }, 1000);
-        const percent = data.value;
-
-        document.getElementById('title').innerText = `${title} ${percent}%`;
+        document.getElementById('title').innerHTML = `${title}`;
 
         fear.returnChart(percent / 100);
       }
