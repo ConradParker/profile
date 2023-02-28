@@ -10,7 +10,6 @@ const getChart = {
       chart,
       chartInset,
       degToRad,
-      el,
       endPadRad,
       height,
       i,
@@ -41,7 +40,7 @@ const getChart = {
 
     totalPercent = 0.75;
 
-    el = d3.select('.charts-container');
+    const el = d3.select('.charts-container');
 
     margin = {
       top: 20,
@@ -50,7 +49,7 @@ const getChart = {
       left: 20,
     };
 
-    width = 370; //el[0][0].offsetWidth - margin.left - margin.right;
+    width = el.node().offsetWidth - margin.left - margin.right;
 
     height = width;
 
