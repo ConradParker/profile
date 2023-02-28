@@ -30,28 +30,6 @@ const utils = {
     const view = await page.text();
     return view;
   },
-
-  handleError(err) {
-    console.warn(err);
-    return new Response(
-      JSON.stringify({
-        code: 400,
-        message: 'Stupid network Error',
-      })
-    );
-  },
-
-  msToTime(duration) {
-    let seconds = Math.floor((duration / 1000) % 60);
-    let minutes = Math.floor((duration / (1000 * 60)) % 60);
-    let hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
-
-    hours = hours < 10 ? `0${hours}` : hours;
-    minutes = minutes < 10 ? `0${minutes}` : minutes;
-    seconds = seconds < 10 ? `0${seconds}` : seconds;
-
-    return `${hours}:${minutes}:${seconds}`;
-  },
 };
 
 export default utils;
