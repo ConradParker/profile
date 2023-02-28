@@ -421,3 +421,25 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+.charts-container {
+  width: 400px;
+  margin: 10px auto;
+}
+
+.chart-color1 {
+  fill: green;
+}
+
+.chart-color2 {
+  fill: #e9621a;
+}
+
+.chart-color3 {
+  fill: #e92213;
+}
+
+.needle,
+.needle-center {
+  fill: #f2f2f2;
+}

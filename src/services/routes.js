@@ -4,6 +4,7 @@ import projects from '../views/pages/projects/projects.js';
 import career from '../views/pages/career/career.js';
 import contact from '../views/pages/contact/contact.js';
 import links from '../views/pages/links/links.js';
+import charts from '../views/pages/charts/charts.js';
 
 const routes = {
   '/': home,
@@ -12,6 +13,7 @@ const routes = {
   '/career': career,
   '/contact': contact,
   '/links': links,
+  '/charts': charts,
 };
 
 export default routes;

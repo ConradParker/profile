@@ -153,7 +153,10 @@ class HeaderBlock extends HTMLElement {
     if (menuItemClicked !== this.activeMenuItem) {
       this.activeMenuItem.classList.remove(activeClassName);
     }
-    menuItemClicked.classList.add(activeClassName);
+
+    if (menuItemClicked !== null) {
+      menuItemClicked.classList.add(activeClassName);
+    }
   }
 
   connectedCallback() {

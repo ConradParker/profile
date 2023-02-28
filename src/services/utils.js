@@ -30,6 +30,16 @@ const utils = {
     const view = await page.text();
     return view;
   },
+
+  handleError(err) {
+    console.warn(err);
+    return new Response(
+      JSON.stringify({
+        code: 400,
+        message: 'Stupid network Error',
+      })
+    );
+  },
 };
 
 export default utils;
