@@ -14,12 +14,20 @@ export default {
         const json = await response.json();
         const title = json.name;
         const data = json.data[0];
-        const timeToUpdate = utils.msToTime(data.time_until_update * 1000);
+
+        let startTimeMilliseconds = data.time_until_update * 1000;
+
+        setInterval(function () {
+          const timeToUpdate = utils.msToTime(startTimeMilliseconds);
+          startTimeMilliseconds -= 1000;
+          document.getElementById(
+            'number-container'
+          ).innerText = `Time to next update: ${timeToUpdate}`;
+        }, 1000);
         const percent = data.value;
 
-        document.getElementById(
-          'number-container'
-        ).innerText = `${title} - ${percent}% \n Time to next update: ${timeToUpdate}`;
+        document.getElementById('title').innerText = `${title} ${percent}%`;
+
         fear.returnChart(percent / 100);
       }
     } catch (error) {
