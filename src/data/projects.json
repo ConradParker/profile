@@ -12,9 +12,9 @@
     "link": "https://github.com/ConradParker/profile"
   },
   {
-    "name": "Copper Pot Adventures",
-    "description": "A e-commerce solution using Gatsby, Contentful, GraphQL and Stripe payment integration.",
-    "imageSrc": "https://res.cloudinary.com/sunseasolutions/image/upload/v1607005488/SunSeaSolutions.com/cornelius.jpg",
-    "link": "https://copperpotadventures.com"
+    "name": "SunSeaSangria.com",
+    "description": "My wife's blog, built with Hugo, Netlify and Decap CMS.",
+    "imageSrc": "https://sunseasangria.com/images/logo.b9d085abb9fb07941627c062f95046bcac687f657b255fd9b0ac655290af1bb8.jpg",
+    "link": "https://sunseasangria.com"
   }
 ]
