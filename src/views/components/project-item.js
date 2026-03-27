@@ -16,8 +16,10 @@ template.innerHTML = `
       margin: 0 auto;
     }
     .project-box__image {
-      max-width: 100%;
-      max-height: 289px;
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background-color: var(--secondary-color, #2f4858);
     }
     .project-box__description {
       min-height: 100px;
